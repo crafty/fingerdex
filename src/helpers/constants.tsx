@@ -20,6 +20,7 @@ export type Product =
   | "other"
   | "concrete"
   | "parks"
+  | "signs"
   | "tuning"
   | "wax";
 
@@ -37,6 +38,7 @@ export const PRODUCTS: Product[] = [
   "other",
   "concrete",
   "parks",
+  "signs",
   "tuning",
   "wax",
 ];
@@ -2299,24 +2301,17 @@ export const BRANDS_CREATORS = [
     promoted: false,
   },
   {
-    name: "Milk fingerboards",
-    instagram: "@milk.fbs",
-    products: [],
-    website: null,
-    promoted: false,
-  },
-  {
-    name: null,
+    name: "Milk Fingerboards",
     instagram: "@milks.fb",
-    products: [],
-    website: null,
+    products: ["decks"],
+    website: "https://www.milkfingerboards.com/",
     promoted: false,
   },
   {
     name: "Milkshake Fingerboards",
     instagram: "@milkshake.fb",
-    products: [],
-    website: null,
+    products: ["decks", "tuning", "accessories"],
+    website: "https://www.milkshakefb.com/",
     promoted: false,
   },
   {
@@ -2476,7 +2471,7 @@ export const BRANDS_CREATORS = [
   {
     name: "No Comply Fingerboards",
     instagram: "@nocomply_fingerboards",
-    products: [],
+    products: ["wheels"],
     website: null,
     promoted: false,
   },
@@ -3191,14 +3186,7 @@ export const BRANDS_CREATORS = [
   {
     name: "Small World Ramps",
     instagram: "@smallworldramps",
-    products: [],
-    website: null,
-    promoted: false,
-  },
-  {
-    name: "Snakehouse 1,000,000 Kn…",
-    instagram: "@snakehouse_1m_knifelord",
-    products: [],
+    products: ["parks"],
     website: null,
     promoted: false,
   },
@@ -3485,8 +3473,17 @@ export const BRANDS_CREATORS = [
   {
     name: "The Vault Fingerboards",
     instagram: "@thevaultfingerboards",
-    products: [],
-    website: null,
+    products: [
+      "decks",
+      "completes",
+      "trucks",
+      "wheels",
+      "tape",
+      "merch",
+      "accessories",
+      "obstacles",
+    ],
+    website: "https://thevaultfingerboards.com/",
     promoted: false,
   },
   {
@@ -3506,8 +3503,8 @@ export const BRANDS_CREATORS = [
   {
     name: "Tiny Ramp Co",
     instagram: "@tinyrampco",
-    products: [],
-    website: null,
+    products: ["parks", "signs", "obstacles"],
+    website: "https://www.tinyramps.com/",
     promoted: false,
   },
   {
@@ -3849,8 +3846,8 @@ export const BRANDS_CREATORS = [
   {
     name: "Wysocki Wheels",
     instagram: "@wysocki_wheels",
-    products: [],
-    website: null,
+    products: ["wheels"],
+    website: "https://1-800fingerboards.com/wysocki-wheels/",
     promoted: false,
   },
   {
