@@ -14,6 +14,7 @@ import { Label } from "@primereact/ui/label";
 import { Select, type SelectValueChangeEvent } from "@primereact/ui/select";
 
 import { PRODUCTS } from "../helpers/constants";
+import { toast } from "@primereact/headless/toaster";
 
 const ProductOptions = PRODUCTS.map((product) => ({
   label: product,
@@ -43,24 +44,40 @@ export const AddCreator = () => {
     `Request to add ${name || instagram || "unknown"}`,
   );
 
-  const body = encodeURIComponent(
-    `Brand or Creator Details:\n
+  const message = `Brand or Creator Details:\n
     {
         name: ${name || null},
         instagram: ${instagram || null},
         website: ${website || null},
         products: ${JSON.stringify(products)},
     }
-    `,
-  );
+    `;
 
-  const href = `mailto:hello@example.com?subject=${subject}&body=${body}`;
+  const body = encodeURIComponent(message);
+
+  const href = `mailto:shout@dancraycraft.dev?subject=${subject}&body=${body}`;
 
   const RequestButton = (props: React.ComponentProps<typeof Button>) => (
     <Button as="a" href={href} {...props}>
       Send Request
     </Button>
   );
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(message);
+      toast.success({
+        title: "Success!",
+        description: "Copied to clipboard successfully!",
+      });
+    } catch (error) {
+      console.error("Failed to copy:", error);
+      toast.error({
+        title: "Error!",
+        description: "Failed to copy to clipboard.",
+      });
+    }
+  };
 
   const getLabel = () => {
     const first =
@@ -200,12 +217,13 @@ export const AddCreator = () => {
                       </Select.Portal>
                     </Select.Root>
                     <p className="flex flex-wrap items-center text-sm text-secondary">
-                      Send request via email or copy{" "}
+                      Send request below via email or copy{" "}
                       <Button
                         iconOnly
                         variant="text"
                         rounded
                         severity="secondary"
+                        onClick={handleCopy}
                       >
                         <Copy />
                       </Button>{" "}

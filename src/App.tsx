@@ -9,6 +9,7 @@ import { Menu } from "@primereact/ui/menu";
 import { CreatorCard } from "./components/creatorCard";
 import { SearchCreators } from "./components/searchCreators";
 import { FilterCreators } from "./components/filterCreators";
+import { AppToaster } from "./components/toaster";
 
 import { sortCreators } from "./helpers/utilities";
 import Logo from "./assets/fingerdex-v2-logo-light.svg";
@@ -58,6 +59,7 @@ function App() {
 
   return (
     <>
+      <AppToaster />
       <section id="header" className="flex flex-col items-start gap-4">
         <div className="w-full">
           <div className="flex justify-between">
@@ -82,14 +84,34 @@ function App() {
                 severity="contrast"
                 rounded
                 variant="text"
-                aria-label="Star"
+                aria-label="Instagram Icon"
                 size={"small"}
                 iconOnly
               >
                 <Instagram size={18} />
               </Button>
-              <Gift size={18} />
-              <QuestionCircle size={18} />
+              <Button
+                severity="contrast"
+                rounded
+                variant="text"
+                aria-label="Gift Icon"
+                size={"small"}
+                iconOnly
+                disabled
+              >
+                <Gift size={18} />
+              </Button>
+              <Button
+                severity="contrast"
+                rounded
+                variant="text"
+                aria-label="Question Icon"
+                size={"small"}
+                iconOnly
+                disabled
+              >
+                <QuestionCircle size={18} />
+              </Button>
             </div>
           </div>
           <Divider />
