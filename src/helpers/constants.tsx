@@ -1,8 +1,8 @@
 export type Creator = {
-  name: string;
-  instagram: string;
+  name: string | null;
+  instagram: string | null;
   products: Product[];
-  website: string;
+  website: string | null;
   promoted: boolean;
 };
 
@@ -15,7 +15,7 @@ export type Product =
   | "tape"
   | "merch"
   | "accessories"
-  | "minatures"
+  | "miniatures"
   | "stickers"
   | "other"
   | "concrete"
@@ -38,7 +38,7 @@ export const PRODUCTS: Product[] = [
   "tape",
   "merch",
   "accessories",
-  "minatures",
+  "miniatures",
   "stickers",
   "other",
   "concrete",
@@ -68,7 +68,7 @@ export const PAGES = [
   },
 ];
 
-export const BRANDS_CREATORS = [
+export const BRANDS_CREATORS: Creator[] = [
   {
     name: "Null FB",
     instagram: "@nullfb.co",
@@ -79,7 +79,7 @@ export const BRANDS_CREATORS = [
   {
     name: "Decent Bit",
     instagram: "@_decentbit_",
-    products: ["accessories", "minatures", "obstacles", "stickers"],
+    products: ["accessories", "miniatures", "obstacles", "stickers"],
     website: "http://www.etsy.com/shop/DecentBit",
     promoted: false,
   },
@@ -202,15 +202,23 @@ export const BRANDS_CREATORS = [
   {
     name: "Aliw Fingerboard",
     instagram: "@aliw_fingerboard",
-    products: [],
+    products: ["decks", "wheels", "obstacles"],
     website: null,
     promoted: false,
   },
   {
     name: "ALP Fingerboard",
     instagram: "@alpfingerboard",
-    products: [],
-    website: null,
+    products: [
+      "decks",
+      "completes",
+      "trucks",
+      "wheels",
+      "tape",
+      "tuning",
+      "accessories",
+    ],
+    website: "https://alpfingerboard.com/",
     promoted: false,
   },
   {
@@ -315,7 +323,7 @@ export const BRANDS_CREATORS = [
   {
     name: "August Fingerboards",
     instagram: "@augustfingerboards",
-    products: [],
+    products: ["decks"],
     website: null,
     promoted: false,
   },
@@ -580,7 +588,7 @@ export const BRANDS_CREATORS = [
     products: [
       "completes",
       "decks",
-      "truck",
+      "trucks",
       "wheels",
       "obstacles",
       "tuning",
@@ -844,7 +852,7 @@ export const BRANDS_CREATORS = [
       "tuning",
       "accessories",
       "obstacles",
-      "minatures",
+      "miniatures",
     ],
     website: null,
     promoted: false,
@@ -2504,7 +2512,7 @@ export const BRANDS_CREATORS = [
   {
     name: "Nuisance Fingerboards",
     instagram: "@nuisance_fingerboards",
-    products: ["Decks", "Merch"],
+    products: ["decks", "merch"],
     website:
       "http://www.etsy.com/shop/NuisanceFingerboards?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAad4Co4LcuFvLDqQec7L20yJAwAUvywQlqLBJqDjxvKLJDVPzidEmcLXI-BfIQ_aem_hSiIMkV7p_zEXjsXXTK-kg",
     promoted: false,
@@ -3149,7 +3157,7 @@ export const BRANDS_CREATORS = [
   {
     name: "Slushcult Mini Mart",
     instagram: "@slushcult",
-    products: ["decks", "tape", "obstacles", "wheels", "mech"],
+    products: ["decks", "tape", "obstacles", "wheels", "merch"],
     website: "http://www.slushcult.com/",
     promoted: false,
   },
