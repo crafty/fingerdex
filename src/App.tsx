@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Instagram } from "@primeicons/react";
 import { type AutoCompleteValueChangeEvent } from "@primereact/ui/autocomplete";
 import { Divider } from "@primereact/ui/divider";
@@ -23,6 +23,7 @@ import {
   type Product,
 } from "./helpers/constants";
 import { useFilters } from "./store/filtersStore";
+import { toast } from "@primereact/ui/toaster";
 
 // @ts-expect-error: sortedCreators might have type issues due to null names
 const sortedCreators = sortCreators(BRANDS_CREATORS);
@@ -57,6 +58,15 @@ function App() {
 
     return matchesSearch && matchesTags;
   });
+
+  useEffect(() => {
+    toast.info({
+      title: "Under Construction",
+      description:
+        "The website is currently under construction. If you see a creator/brand with missing products or other information, it may be due to ongoing updates. Your patience is appreciated.",
+      duration: 9000,
+    });
+  }, []);
 
   return (
     <>

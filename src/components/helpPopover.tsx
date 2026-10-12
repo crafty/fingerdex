@@ -37,11 +37,10 @@ export const HelpPopover = () => {
             <Popover.Content>
               <Divider />
               <p className="text-xs text-muted-color mt-1">
-                Please keep in mind the website is currently under construction
-                so if you see a creator/brand with missing products or other
-                information, it may be due to ongoing updates. I'm single
-                handedly managing the data and development, so your patience is
-                appreciated.
+                The website is currently under construction. If you see a
+                creator/brand with missing products or other information, it may
+                be due to ongoing updates. I'm single handedly managing the data
+                and development, so your patience is appreciated.
               </p>
               <Divider />
               <h1 className="text-lg font-bold">How do I add a creator?</h1>

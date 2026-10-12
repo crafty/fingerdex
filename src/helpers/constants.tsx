@@ -284,17 +284,10 @@ export const BRANDS_CREATORS = [
     promoted: false,
   },
   {
-    name: null,
-    instagram: "@arkonautheutics",
-    products: [],
-    website: null,
-    promoted: false,
-  },
-  {
     name: "Ascetic",
     instagram: "@asceticfingerboards",
-    products: [],
-    website: null,
+    products: ["decks", "tuning"],
+    website: "https://www.asceticfingerboards.com/",
     promoted: false,
   },
   {
@@ -307,8 +300,16 @@ export const BRANDS_CREATORS = [
   {
     name: "Atomic Fingerboard",
     instagram: "@atomicfingerboard",
-    products: [],
-    website: null,
+    products: [
+      "decks",
+      "completes",
+      "trucks",
+      "obstacles",
+      "tape",
+      "wheels",
+      "other",
+    ],
+    website: "www.atomicfingerboard.cl",
     promoted: false,
   },
   {
