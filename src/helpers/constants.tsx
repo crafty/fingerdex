@@ -2999,6 +2999,13 @@ export const BRANDS_CREATORS = [
     promoted: false,
   },
   {
+    name: "Saucen",
+    instagram: "@saucen.fb",
+    products: ["decks"],
+    website: "https://www.etsy.com/shop/SAUCENSTUDIO",
+    promoted: false,
+  },
+  {
     name: "sausage ramps",
     instagram: "@sausage.ramps",
     products: [],

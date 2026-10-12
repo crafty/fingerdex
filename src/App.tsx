@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { Gift, Instagram, QuestionCircle } from "@primeicons/react";
+import { Instagram } from "@primeicons/react";
 import { type AutoCompleteValueChangeEvent } from "@primereact/ui/autocomplete";
 import { Divider } from "@primereact/ui/divider";
 import { NavigationMenu } from "@primereact/ui/navigationmenu";
@@ -11,6 +11,8 @@ import { SearchCreators } from "./components/searchCreators";
 import { FilterCreators } from "./components/filterCreators";
 import { AppToaster } from "./components/toaster";
 import { AddCreator } from "./components/addCreator";
+import { HelpPopover } from "./components/helpPopover";
+import { SupportUsPopover } from "./components/supportUsPopover";
 
 import { sortCreators } from "./helpers/utilities";
 import Logo from "./assets/fingerdex-v2-logo-light.svg";
@@ -89,28 +91,9 @@ function App() {
               >
                 <Instagram size={18} />
               </Button>
-              <Button
-                severity="contrast"
-                rounded
-                variant="text"
-                aria-label="Gift Icon"
-                size={"small"}
-                iconOnly
-                disabled
-              >
-                <Gift size={18} />
-              </Button>
-              <Button
-                severity="contrast"
-                rounded
-                variant="text"
-                aria-label="Question Icon"
-                size={"small"}
-                iconOnly
-                disabled
-              >
-                <QuestionCircle size={18} />
-              </Button>
+              <SupportUsPopover />
+
+              <HelpPopover />
             </div>
           </div>
           <Divider />
