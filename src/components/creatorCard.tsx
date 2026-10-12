@@ -63,7 +63,9 @@ export const CreatorCard = ({
             target="_blank"
             rel="noopener noreferrer"
             disabled={!creator.instagram}
-            onClick={() => trackBrandClick(creator.instagram || creator.name)}
+            onClick={() =>
+              trackBrandClick(String(creator.instagram || creator.name))
+            }
           >
             <Instagram />
             Instagram
@@ -82,7 +84,9 @@ export const CreatorCard = ({
             href={creator.website}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => trackBrandClick(creator.instagram || creator.name)}
+            onClick={() =>
+              trackBrandClick(String(creator.instagram || creator.name))
+            }
           >
             <Globe />
             Visit Site
