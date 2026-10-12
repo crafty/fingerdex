@@ -25,7 +25,6 @@ import {
 import { useFilters } from "./store/filtersStore";
 import { toast } from "@primereact/ui/toaster";
 
-// @ts-expect-error: sortedCreators might have type issues due to null names
 const sortedCreators = sortCreators(BRANDS_CREATORS);
 
 function App() {

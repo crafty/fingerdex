@@ -45,11 +45,11 @@ export const HelpPopover = () => {
               <Divider />
               <h1 className="text-lg font-bold">How do I add a creator?</h1>
               <p className="text-xs text-muted-color mt-1">
-                To add a creator, click on the "Add Creator" button at the top
-                right of the page and fill out the required information. You can
-                click the "send request" button to email the request for
-                approval. Optionally you can click the copy icon below the form
-                and the IG icon to paste the request into my Instagram messages.
+                To add a creator, click on the add user icon at the top right of
+                the page and fill out the required information. You can click
+                the "send request" button to email the request for approval.
+                Optionally you can click the copy icon below the form and the IG
+                icon to paste the request into my Instagram messages.
               </p>
               <Divider />
               <h1 className="text-lg font-bold">Creator Requirements</h1>
