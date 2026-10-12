@@ -1,15 +1,16 @@
-import "./App.css";
+import { useRef } from "react";
 import { Gift, Instagram, QuestionCircle } from "@primeicons/react";
 import { type AutoCompleteValueChangeEvent } from "@primereact/ui/autocomplete";
-import { useRef } from "react";
 import { Divider } from "@primereact/ui/divider";
 import { NavigationMenu } from "@primereact/ui/navigationmenu";
 import { Menu } from "@primereact/ui/menu";
+import { Button } from "@primereact/ui/button";
 
 import { CreatorCard } from "./components/creatorCard";
 import { SearchCreators } from "./components/searchCreators";
 import { FilterCreators } from "./components/filterCreators";
 import { AppToaster } from "./components/toaster";
+import { AddCreator } from "./components/addCreator";
 
 import { sortCreators } from "./helpers/utilities";
 import Logo from "./assets/fingerdex-v2-logo-light.svg";
@@ -20,8 +21,6 @@ import {
   type Product,
 } from "./helpers/constants";
 import { useFilters } from "./store/filtersStore";
-import { Button } from "@primereact/ui/button";
-import { AddCreator } from "./components/addCreator";
 
 // @ts-expect-error: sortedCreators might have type issues due to null names
 const sortedCreators = sortCreators(BRANDS_CREATORS);
@@ -117,7 +116,7 @@ function App() {
           <Divider />
         </div>
 
-        <div className="flex justify-between items-center w-full cursor-pointer">
+        <div className="flex justify-between items-center w-full">
           <h1 className="text-2xl font-bold">Brands & Creators</h1>
           <AddCreator />
         </div>

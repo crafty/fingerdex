@@ -22,7 +22,12 @@ export type Product =
   | "parks"
   | "signs"
   | "tuning"
-  | "wax";
+  | "wax"
+  | "deck molds"
+  | "deck shapers"
+  | "obstacle molds"
+  | "custom obstacles"
+  | "3D assets";
 
 export const PRODUCTS: Product[] = [
   "wheels",
@@ -41,6 +46,11 @@ export const PRODUCTS: Product[] = [
   "signs",
   "tuning",
   "wax",
+  "deck molds",
+  "deck shapers",
+  "obstacle molds",
+  "custom obstacles",
+  "3D assets",
 ];
 
 export const PAGES = [
@@ -183,23 +193,9 @@ export const BRANDS_CREATORS = [
     promoted: false,
   },
   {
-    name: "Actual Size",
-    instagram: "@actualsizefb",
-    products: [],
-    website: null,
-    promoted: false,
-  },
-  {
     name: null,
     instagram: "@aisle_nine9",
-    products: [],
-    website: null,
-    promoted: false,
-  },
-  {
-    name: "AK decks",
-    instagram: "@akdecks",
-    products: [],
+    products: ["decks"],
     website: null,
     promoted: false,
   },
@@ -372,16 +368,9 @@ export const BRANDS_CREATORS = [
     promoted: false,
   },
   {
-    name: "Bangerang Fingerboards",
-    instagram: "@bangerangfb",
-    products: [],
-    website: null,
-    promoted: false,
-  },
-  {
     name: "BANGIN!",
     instagram: "@banginfb",
-    products: [],
+    products: ["wheels"],
     website: null,
     promoted: false,
   },
@@ -400,7 +389,7 @@ export const BRANDS_CREATORS = [
     promoted: false,
   },
   {
-    name: null,
+    name: "Bckyrd Boards",
     instagram: "@bckyrd.fb",
     products: ["decks"],
     website: null,
@@ -487,17 +476,10 @@ export const BRANDS_CREATORS = [
     promoted: false,
   },
   {
-    name: "BLCNY LTD",
-    instagram: "@blicnyltd",
-    products: [],
-    website: null,
-    promoted: false,
-  },
-  {
     name: "Blink Fingerboards",
     instagram: "@blinkfb",
-    products: [],
-    website: null,
+    products: ["decks", "obstacles"],
+    website: "https://blinkfb.com/",
     promoted: false,
   },
   {
@@ -515,37 +497,23 @@ export const BRANDS_CREATORS = [
     promoted: false,
   },
   {
-    name: "Blue Moon FB Shop",
-    instagram: "@blue.moon_fb",
-    products: [],
-    website: null,
-    promoted: false,
-  },
-  {
     name: "boardkennel",
     instagram: "@boardkennel_official",
-    products: [],
+    products: ["decks"],
     website: null,
     promoted: false,
   },
   {
     name: "Bobinnwoods",
     instagram: "@bobinnwoods",
-    products: [],
-    website: null,
-    promoted: false,
-  },
-  {
-    name: "Bolts",
-    instagram: "@boltsbushings",
-    products: [],
+    products: ["decks"],
     website: null,
     promoted: false,
   },
   {
     name: "Bone Decks",
     instagram: "@bonedecks",
-    products: [],
+    products: ["decks"],
     website: null,
     promoted: false,
   },
@@ -623,8 +591,13 @@ export const BRANDS_CREATORS = [
   {
     name: "BROOSKIE BUILDS CO",
     instagram: "@brooskiebuildsco",
-    products: [],
-    website: null,
+    products: [
+      "deck molds",
+      "deck shapers",
+      "obstacle molds",
+      "custom obstacles",
+    ],
+    website: "https://www.brooskiebuildsco.com/",
     promoted: false,
   },
   {
@@ -713,9 +686,9 @@ export const BRANDS_CREATORS = [
   },
   {
     name: "Cheeks FB",
-    instagram: "@cheeksfb1",
-    products: [],
-    website: null,
+    instagram: "@cheeksfb",
+    products: ["decks", "merch"],
+    website: "https://cheeksfingerboards.bigcartel.com/",
     promoted: false,
   },
   {
@@ -782,13 +755,6 @@ export const BRANDS_CREATORS = [
     promoted: false,
   },
   {
-    name: "Coffee Decks",
-    instagram: "@coffeedecks",
-    products: [],
-    website: null,
-    promoted: false,
-  },
-  {
     name: "Coffin.Wood",
     instagram: "@coffinwood",
     products: [],
@@ -805,70 +771,80 @@ export const BRANDS_CREATORS = [
   {
     name: "ComfyTown Ramps",
     instagram: "@comfytownramps",
-    products: [],
-    website: null,
+    products: ["obstacles", "parks", "custom obstacles"],
+    website:
+      "https://www.etsy.com/shop/ComfyTownRamps?etsrc=sdt&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAaf6q-NfBoKyFmSvGMoY_XdcBRgGUbdkngVBWJaQ-DKYjP_EwdRaomql24SGgQ_aem_ef71l6q3MjyneIA6DduEtw",
     promoted: false,
   },
   {
     name: "Cowply",
     instagram: "@cowply.jpeg",
-    products: [],
-    website: null,
+    products: ["decks", "merch"],
+    website: "https://cowply.company/",
     promoted: false,
   },
   {
     name: "CRESKATE",
     instagram: "@create.your.skate",
-    products: [],
-    website: null,
+    products: ["obstacles", "deck molds", "obstacle molds"],
+    website: "https://createyourskate.com/",
     promoted: false,
   },
   {
     name: "CreteDoctor",
     instagram: "@cretedoctor",
-    products: [],
-    website: null,
+    products: ["decks", "obstacles", "tape"],
+    website: "https://www.cretedoctor.com/",
     promoted: false,
   },
   {
     name: "CreteStreetfb",
     instagram: "@cretestreetfb",
-    products: [],
-    website: null,
+    products: ["obstacles"],
+    website: "https://cretestreetfb.bigcartel.com/",
     promoted: false,
   },
   {
     name: "Crisis Fingerboards",
     instagram: "@crisis.fingerboards",
-    products: [],
+    products: ["decks"],
     website: null,
     promoted: false,
   },
   {
     name: "Crook Fingers",
     instagram: "@crookfingers",
-    products: [],
+    products: ["decks"],
     website: null,
     promoted: false,
   },
   {
     name: "Cruiser Joy fingerboards",
     instagram: "@cruiserjoy_fingerboards",
-    products: [],
-    website: null,
+    products: ["decks"],
+    website: "https://cruiserjoy.bigcartel.com/",
     promoted: false,
   },
   {
     name: "Cryptic Collective",
     instagram: "@cryptic_intl",
-    products: [],
-    website: null,
+    products: ["decks", "tape", "tuning"],
+    website: "https://www.crypticcollective.com/",
     promoted: false,
   },
   {
     name: "Custom FingerShop",
     instagram: "@customshopfingerboards",
-    products: [],
+    products: [
+      "decks",
+      "completes",
+      "wheels",
+      "tape",
+      "tuning",
+      "accessories",
+      "obstacles",
+      "minatures",
+    ],
     website: null,
     promoted: false,
   },
@@ -908,13 +884,6 @@ export const BRANDS_CREATORS = [
     promoted: false,
   },
   {
-    name: "Daytona Records",
-    instagram: "@daytona.records",
-    products: [],
-    website: null,
-    promoted: false,
-  },
-  {
     name: "Dead End Obstacles",
     instagram: "@deadendobstacles",
     products: [],
@@ -945,8 +914,8 @@ export const BRANDS_CREATORS = [
   {
     name: "DeliDecks",
     instagram: "@delidecks",
-    products: [],
-    website: null,
+    products: ["trucks", "wheels", "completes", "decks"],
+    website: "https://delidecksusa.com/",
     promoted: false,
   },
   {
@@ -1094,7 +1063,7 @@ export const BRANDS_CREATORS = [
     instagram: "@dudeguy.fb",
     products: ["wheels", "obstacles", "decks", "merch", "other"],
     website: "http://www.dgfbshop.com",
-    promoted: true,
+    promoted: false,
   },
   {
     name: "dum one",
@@ -1794,7 +1763,7 @@ export const BRANDS_CREATORS = [
     instagram: "@indexchicago",
     products: ["decks", "trucks", "wheels", "obstacles", "tape", "tuning"],
     website: "https://indexfingerboarding.com/",
-    promoted: true,
+    promoted: false,
   },
   {
     name: "Industry fb",
@@ -2315,29 +2284,22 @@ export const BRANDS_CREATORS = [
     promoted: false,
   },
   {
-    name: null,
+    name: "MINIMALFBCO",
     instagram: "@minimalfbco",
-    products: [],
+    products: ["decks"],
     website: null,
     promoted: false,
   },
   {
     name: "Mini Skate Spots",
     instagram: "@miniskatespot",
-    products: [],
-    website: null,
+    products: ["parks", "obstacles", "accessories", "3D assets"],
+    website: "https://www.etsy.com/shop/MiniSkateSpots",
     promoted: false,
   },
   {
     name: "Mini Skate Co.",
     instagram: "@minisktco",
-    products: [],
-    website: null,
-    promoted: false,
-  },
-  {
-    name: "Minitrowel",
-    instagram: "@minitrowel.fb",
     products: [],
     website: null,
     promoted: false,
@@ -2401,8 +2363,8 @@ export const BRANDS_CREATORS = [
   {
     name: "Muck FB",
     instagram: "@muck_fb",
-    products: [],
-    website: null,
+    products: ["decks", "wheels", "tape", "accessories", "stickers"],
+    website: "https://www.muckfb.com/",
     promoted: false,
   },
   {
@@ -3116,8 +3078,8 @@ export const BRANDS_CREATORS = [
   {
     name: "Silent Fingerboard Obstac…",
     instagram: "@silentobstacles",
-    products: [],
-    website: null,
+    products: ["obstacles", "miniatures"],
+    website: "https://silentobstacles.com/",
     promoted: false,
   },
   {
@@ -3275,10 +3237,10 @@ export const BRANDS_CREATORS = [
     promoted: false,
   },
   {
-    name: null,
+    name: "Spaghetti Tavern",
     instagram: "@spaghetti_tavern_fb",
-    products: [],
-    website: null,
+    products: ["decks"],
+    website: "https://spaghettitavernfb.bigcartel.com/",
     promoted: false,
   },
   {
@@ -3291,8 +3253,8 @@ export const BRANDS_CREATORS = [
   {
     name: "SPITBOARDS",
     instagram: "@spit.boards",
-    products: [],
-    website: null,
+    products: ["completes"],
+    website: "https://spitboards.com/",
     promoted: false,
   },
   {
@@ -3422,9 +3384,19 @@ export const BRANDS_CREATORS = [
     promoted: false,
   },
   {
-    name: "Teak Tuning Pro Fingerbo…",
+    name: "Teak Tuning Pro Fingerboards",
     instagram: "@teaktuning",
-    products: [],
+    products: [
+      "decks",
+      "completes",
+      "trucks",
+      "wheels",
+      "tape",
+      "merch",
+      "obstacles",
+      "accessories",
+      "tuning",
+    ],
     website: "http://www.teaktuning.com/",
     promoted: false,
   },
@@ -3753,6 +3725,13 @@ export const BRANDS_CREATORS = [
     promoted: false,
   },
   {
+    name: "Windy City Crete",
+    instagram: "@windycitycrete",
+    products: ["obstacles", "concrete"],
+    website: "https://www.windycitycrete.com/",
+    promoted: false,
+  },
+  {
     name: "Winkler Wheels",
     instagram: "@winklerwheels",
     products: [],
@@ -4070,7 +4049,7 @@ export const BRANDS_CREATORS = [
   {
     name: "Weapon, LLC",
     instagram: null,
-    products: [],
+    products: ["obstacles", "deck molds", "accessories", "other"],
     website: null,
     promoted: false,
   },

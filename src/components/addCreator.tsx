@@ -95,7 +95,7 @@ export const AddCreator = () => {
   };
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center cursor-pointer">
       <Dialog.Root>
         <Dialog.Trigger as={TriggerButton}>
           Add Creator or Brand{" "}
