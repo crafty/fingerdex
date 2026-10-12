@@ -1481,6 +1481,13 @@ export const BRANDS_CREATORS: Creator[] = [
     promoted: false,
   },
   {
+    name: "Gifted Prolific One",
+    instagram: "@gpo.fb",
+    products: ["decks"],
+    website: "https://gpo.bigcartel.com/",
+    promoted: false,
+  },
+  {
     name: "gL Decks",
     instagram: "@gldecks",
     products: [],
