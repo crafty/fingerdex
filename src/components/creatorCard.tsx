@@ -1,9 +1,10 @@
 import { Card } from "@primereact/ui/card";
-import type { Creator } from "../helpers/constants";
 import { Badge } from "@primereact/ui/badge";
 import { Divider } from "@primereact/ui/divider";
 import { Globe, Instagram } from "@primeicons/react";
 import { Button } from "@primereact/ui/button";
+import type { Creator } from "../helpers/constants";
+import { trackBrandClick } from "../helpers/utilities";
 
 export const CreatorCard = ({
   creator,
@@ -62,6 +63,7 @@ export const CreatorCard = ({
             target="_blank"
             rel="noopener noreferrer"
             disabled={!creator.instagram}
+            onClick={() => trackBrandClick(creator.instagram || creator.name)}
           >
             <Instagram />
             Instagram
@@ -80,6 +82,7 @@ export const CreatorCard = ({
             href={creator.website}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackBrandClick(creator.instagram || creator.name)}
           >
             <Globe />
             Visit Site

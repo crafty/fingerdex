@@ -15,3 +15,10 @@ export const sortCreators = (creators: Creator[]): Creator[] => {
 
   return [...creators].sort((a, b) => priority(a) - priority(b));
 };
+
+export const trackBrandClick = (brandName: string) => {
+  // @ts-expect-error gtag is injected by Google Analytics
+  window.gtag?.("event", "brand_click", {
+    brand_name: brandName,
+  });
+};
