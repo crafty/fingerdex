@@ -58,6 +58,21 @@ function App() {
     return matchesSearch && matchesTags;
   });
 
+  if (import.meta.env.DEV) {
+    console.log(
+      "Updated Creators: ",
+      filteredCreators.filter(
+        (creator) => creator.products.filter(Boolean).length > 0,
+      ).length,
+    );
+    console.log(
+      "Creators to Update: ",
+      filteredCreators.filter(
+        (creator) => creator.products.filter(Boolean).length === 0,
+      ).length,
+    );
+  }
+
   useEffect(() => {
     toast.info({
       title: "Under Construction",

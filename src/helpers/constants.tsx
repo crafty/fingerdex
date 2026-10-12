@@ -243,13 +243,6 @@ export const BRANDS_CREATORS: Creator[] = [
     promoted: false,
   },
   {
-    name: "Ant1c",
-    instagram: "@ant1c__",
-    products: [],
-    website: null,
-    promoted: false,
-  },
-  {
     name: "Antidote",
     instagram: "@antidotefingerboards",
     products: ["decks"],
@@ -1327,6 +1320,13 @@ export const BRANDS_CREATORS: Creator[] = [
     promoted: false,
   },
   {
+    name: "FitzyFB",
+    instagram: "@fitzyfb",
+    products: ["decks"],
+    website: null,
+    promoted: false,
+  },
+  {
     name: "Five Luck Fingerboards",
     instagram: "@fiveluckfingerboards",
     products: [],
@@ -1530,6 +1530,13 @@ export const BRANDS_CREATORS: Creator[] = [
     promoted: false,
   },
   {
+    name: "Good Fun",
+    instagram: "@goodfun.fb",
+    products: ["decks", "wax", "stickers"],
+    website: "https://goodfun.bigcartel.com/",
+    promoted: true,
+  },
+  {
     name: null,
     instagram: "@goodsdamag",
     products: [],
@@ -1555,6 +1562,13 @@ export const BRANDS_CREATORS: Creator[] = [
     instagram: "@grandfingers",
     products: [],
     website: null,
+    promoted: false,
+  },
+  {
+    name: "GreenWalrus",
+    instagram: "@greenwalrusfb",
+    products: ["decks", "obstacles", "deck molds", "obstacle molds"],
+    website: "https://greenwalruscompany.bigcartel.com/",
     promoted: false,
   },
   {
@@ -1926,6 +1940,20 @@ export const BRANDS_CREATORS: Creator[] = [
     instagram: "@kickflickfb",
     products: [],
     website: null,
+    promoted: false,
+  },
+  {
+    name: "KILLJOY MFG. CO.",
+    instagram: "@killjoymfgco",
+    products: [
+      "decks",
+      "accessories",
+      "miniatures",
+      "stickers",
+      "other",
+      "merch",
+    ],
+    website: "https://www.killjoymfg.co",
     promoted: false,
   },
   {
@@ -2770,6 +2798,13 @@ export const BRANDS_CREATORS: Creator[] = [
     promoted: false,
   },
   {
+    name: "Prick Improv",
+    instagram: "@prick.improv",
+    products: ["decks", "obstacles"],
+    website: "https://prick-improv.bigcartel.com",
+    promoted: false,
+  },
+  {
     name: null,
     instagram: "@prizply",
     products: [],
@@ -3306,6 +3341,13 @@ export const BRANDS_CREATORS: Creator[] = [
     name: "Storm Ryder",
     instagram: "@stormryderfingerboards",
     products: [],
+    website: null,
+    promoted: false,
+  },
+  {
+    name: "stung.dex",
+    instagram: "@stung.dex",
+    products: ["decks"],
     website: null,
     promoted: false,
   },
