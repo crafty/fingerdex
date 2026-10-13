@@ -2160,6 +2160,13 @@ export const BRANDS_CREATORS: Creator[] = [
     promoted: false,
   },
   {
+    name: "Lowlife Fingerboard Co.",
+    instagram: "@lowlifefingerboardco",
+    products: ["decks"],
+    website: "https://lowlifefbco.bigcartel.com/",
+    promoted: false,
+  },
+  {
     name: "Lowpro",
     instagram: "@lowpro.pt",
     products: [],
