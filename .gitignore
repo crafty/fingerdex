@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Raw Instagram scraper export (trimmed into src/helpers/instagram-profiles.json)
+src/helpers/dataset_instagram-scraper.json

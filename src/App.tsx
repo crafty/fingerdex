@@ -5,6 +5,7 @@ import { Divider } from "@primereact/ui/divider";
 import { NavigationMenu } from "@primereact/ui/navigationmenu";
 import { Menu } from "@primereact/ui/menu";
 import { Button } from "@primereact/ui/button";
+import { toast } from "@primereact/ui/toaster";
 
 import { CreatorCard } from "./components/creatorCard";
 import { SearchCreators } from "./components/searchCreators";
@@ -14,7 +15,7 @@ import { AddCreator } from "./components/addCreator";
 import { HelpPopover } from "./components/helpPopover";
 import { SupportUsPopover } from "./components/supportUsPopover";
 
-import { sortCreators } from "./helpers/utilities";
+import { sortCreators, mergeInstagramData } from "./helpers/utilities";
 import Logo from "./assets/fingerdex-v2-logo-light.svg";
 import {
   BRANDS_CREATORS,
@@ -23,9 +24,10 @@ import {
   type Product,
 } from "./helpers/constants";
 import { useFilters } from "./store/filtersStore";
-import { toast } from "@primereact/ui/toaster";
 
-const sortedCreators = sortCreators(BRANDS_CREATORS);
+const sortedCreators = sortCreators(mergeInstagramData(BRANDS_CREATORS));
+
+console.log(sortedCreators);
 
 function App() {
   const { searchQuery, selectedTags, setSelectedTags } = useFilters();

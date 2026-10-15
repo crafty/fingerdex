@@ -1,10 +1,15 @@
 import { Card } from "@primereact/ui/card";
+import { Avatar } from "@primereact/ui/avatar";
 import { Badge } from "@primereact/ui/badge";
 import { Divider } from "@primereact/ui/divider";
 import { Globe, Instagram } from "@primeicons/react";
 import { Button } from "@primereact/ui/button";
 import type { Creator } from "../helpers/constants";
-import { trackBrandClick } from "../helpers/utilities";
+import {
+  trackBrandClick,
+  getCreatorInitial,
+  formatWeeksAgo,
+} from "../helpers/utilities";
 
 export const CreatorCard = ({
   creator,
@@ -16,10 +21,22 @@ export const CreatorCard = ({
   <Card.Root key={creator.name} className="min-w-85.75 flex-[1_1_343px]">
     <Card.Body className="space-y-4 h-full">
       <Card.Caption>
-        <Card.Title className="flex justify-between">
-          <p className="font-bold! text-xl! overflow-hidden text-ellipsis whitespace-nowrap">
-            {creator.name || creator.instagram}
-          </p>
+        <Card.Title className="flex justify-between items-center gap-3">
+          <div className="flex items-center gap-3 min-w-0">
+            <Avatar.Root size="large" shape="circle" className="shrink-0">
+              {!creator.private && creator.profilePicUrlHD && (
+                <Avatar.Image
+                  src={creator.profilePicUrlHD}
+                  alt={`${creator.name || creator.instagram} profile picture`}
+                  referrerPolicy="no-referrer"
+                />
+              )}
+              <Avatar.Fallback>{getCreatorInitial(creator)}</Avatar.Fallback>
+            </Avatar.Root>
+            <p className="font-bold! text-xl! overflow-hidden text-ellipsis whitespace-nowrap">
+              {creator.name || creator.instagram}
+            </p>
+          </div>
           {creator.promoted && (
             <Badge size="large" className="bg-amber-300!">
               Promoted!
@@ -29,6 +46,26 @@ export const CreatorCard = ({
       </Card.Caption>
 
       <Card.Content className="flex flex-col gap-6">
+        <div className="flex gap-6">
+          <div>
+            <p className="font-bold text-sm text-gray-400">Followers</p>
+            <p>
+              {creator.private || creator.followersCount === undefined
+                ? "N/A"
+                : creator.followersCount.toLocaleString()}
+            </p>
+          </div>
+          <div>
+            <p className="font-bold text-sm text-gray-400">Last Post</p>
+            <p>
+              {creator.private
+                ? "Profile private"
+                : creator.latestPostTimestamp
+                  ? formatWeeksAgo(creator.latestPostTimestamp)
+                  : "N/A"}
+            </p>
+          </div>
+        </div>
         <div className="flex flex-1 flex-wrap items-center gap-2 mb-2">
           <div className="flex flex-col w-full">
             <p className="font-bold text-sm text-left text-gray-400">

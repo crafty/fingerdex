@@ -4,6 +4,10 @@ export type Creator = {
   products: Product[];
   website: string | null;
   promoted: boolean;
+  profilePicUrlHD?: string;
+  private?: boolean;
+  followersCount?: number;
+  latestPostTimestamp?: string;
 };
 
 export type Product =
