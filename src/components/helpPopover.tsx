@@ -6,25 +6,24 @@ import { Popover } from "@primereact/ui/popover";
 const HelpButton = (props: React.ComponentProps<typeof Button>) => (
   <Button
     {...props}
-    severity="contrast"
     rounded
     variant="text"
-    aria-label="Question Icon"
-    size={"small"}
+    aria-label="Help"
     iconOnly
+    className="size-11"
   >
-    <QuestionCircle size={18} />
+    <QuestionCircle size={20} />
   </Button>
 );
 
 export const HelpPopover = () => {
   return (
     <Popover.Root>
-      <Popover.Trigger as={HelpButton} severity="secondary" variant="outlined">
+      <Popover.Trigger as={HelpButton}>
         FAQ
       </Popover.Trigger>
       <Popover.Portal>
-        <Popover.Positioner sideOffset={12} side="top" align="end">
+        <Popover.Positioner sideOffset={8} side="bottom" align="end">
           <Popover.Popup className="w-80 max-w-(--px-available-width)">
             <Popover.Arrow />
             <Popover.Header className="items-start!">

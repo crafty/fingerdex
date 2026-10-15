@@ -57,6 +57,21 @@ export const PRODUCTS: Product[] = [
   "3D assets",
 ];
 
+export type SortKey =
+  | "featured"
+  | "followers-desc"
+  | "followers-asc"
+  | "lastPost-desc"
+  | "lastPost-asc";
+
+export const SORT_LABELS: Record<SortKey, string> = {
+  featured: "Featured",
+  "followers-desc": "Most followers",
+  "followers-asc": "Fewest followers",
+  "lastPost-desc": "Newest post",
+  "lastPost-asc": "Oldest post",
+};
+
 export const PAGES = [
   {
     label: "Creators",

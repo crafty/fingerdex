@@ -6,29 +6,24 @@ import { Popover } from "@primereact/ui/popover";
 const SupportButton = (props: React.ComponentProps<typeof Button>) => (
   <Button
     {...props}
-    severity="contrast"
     rounded
     variant="text"
-    aria-label="Gift Icon"
-    size={"small"}
+    aria-label="Support us"
     iconOnly
+    className="size-11"
   >
-    <Gift size={18} />
+    <Gift size={20} />
   </Button>
 );
 
 export const SupportUsPopover = () => {
   return (
     <Popover.Root>
-      <Popover.Trigger
-        as={SupportButton}
-        severity="secondary"
-        variant="outlined"
-      >
+      <Popover.Trigger as={SupportButton}>
         Support Us
       </Popover.Trigger>
       <Popover.Portal>
-        <Popover.Positioner sideOffset={12} side="top" align="end">
+        <Popover.Positioner sideOffset={8} side="bottom" align="end">
           <Popover.Popup className="w-80 max-w-(--px-available-width)">
             <Popover.Arrow />
             <Popover.Header className="items-start!">
@@ -57,7 +52,7 @@ export const SupportUsPopover = () => {
                     href="https://account.venmo.com/u/Dan-Craycraft"
                     target="_blank"
                     rel="noopener"
-                    className="text-blue-500 underline"
+                    className="text-accent-300 underline hover:text-accent-200"
                   >
                     Venmo
                   </a>

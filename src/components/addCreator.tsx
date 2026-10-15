@@ -25,12 +25,12 @@ const TriggerButton = (props: React.ComponentProps<typeof Button>) => (
   <Button
     {...props}
     aria-label="Add Creator or Brand"
-    size="normal"
     iconOnly
-    variant="text"
-    severity="contrast"
+    variant="outlined"
+    severity="secondary"
+    className="size-11"
   >
-    <UserPlus size={26} />
+    <UserPlus size={20} />
   </Button>
 );
 
@@ -95,7 +95,7 @@ export const AddCreator = () => {
   };
 
   return (
-    <div className="flex justify-center cursor-pointer">
+    <div className="flex justify-center">
       <Dialog.Root>
         <Dialog.Trigger as={TriggerButton}>
           Add Creator or Brand{" "}

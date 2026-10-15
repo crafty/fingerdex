@@ -1,13 +1,13 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { PrimeReactProvider } from "@primereact/core";
-import Aura from "@primeuix/themes/aura";
 import App from "./App.tsx";
+import { Nocturne } from "./theme";
 import "./index.css";
 
 const primereact = {
   theme: {
-    preset: Aura,
+    preset: Nocturne,
     options: {
       darkModeSelector: ".app-dark", // none, system,
       cssVariables: true,
